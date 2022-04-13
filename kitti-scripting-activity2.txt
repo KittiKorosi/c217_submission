@@ -1,0 +1,5 @@
+TODAY=$(date +%Y-%m-%d)
+for FILE in ./testfiles/*; do
+	mv $FILE $FILE.$TODAY
+done
+
