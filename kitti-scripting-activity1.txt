@@ -1,0 +1,19 @@
+#user
+echo "User is:  
+$USER"
+#date
+echo "Today's date is:  
+$(date '+%Y.%m.%d')"
+#time
+now=$(date +"%T")
+echo "Current time is: 
+$now"
+#current dir
+echo "Current directory is: 
+${PWD}"
+#how many files in dir
+echo "NO of files: " 
+ls ${PWD} | wc -l
+#biggest file in current dir
+echo "Biggest file is:" 
+du -a ${PWD} | sort -n -r | head -n 1
