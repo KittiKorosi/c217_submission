@@ -1,0 +1,21 @@
+#!/bin/sh
+
+lottery_numbers=$(seq -w 50 | shuf -n 5 | sort -n | tr '\n' ' ' ; echo ; seq -w 10 | shuf -n 1 | sort -n | tr '\n' ' ' ; echo ;)
+
+for i in `seq 1`; do seq 1 50 | shuf -n 5 | sort -g | tr '\n' ' ' ; echo; done > my_numbers
+
+	awk '
+	NR==1{
+	print "";
+        print "Lottery Numbers: " lottery_numbers;
+	print "";
+     	printf("%-25s\t%-10s\t%-10s\n", "My Numbers", "Matched", "Result")
+        n=split(lottery_numbers, ln);
+ 	 } 
+	 {
+     	 c=0;
+         for (i=1; i<=NF; i++) for (j=1; j<=n ; j++) if ($i==ln[j]) c++;
+     	 printf("%-25s\t%-10d\t%-10s\n", $0, c, ((c < 6) ? "lose" : "win"));
+        }
+' lottery_numbers="$lottery_numbers" my_numbers > ~/result$(date +%d-%m-%Y).txt
+
