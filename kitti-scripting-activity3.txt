@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 lottery_numbers=$(seq -w 50 | shuf -n 5 | sort -n | tr '\n' ' ' ; echo ; seq -w 10 | shuf -n 1 | sort -n | tr '\n' ' ' ; echo ;)
 

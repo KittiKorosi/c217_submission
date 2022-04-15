@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Your numbers: "
+read input
+
+if [[ -n ${input//[0-9]/} ]]; then
+    echo "Contains letters!"
+else 
+	echo $input |rev
+fi
+
+
+
