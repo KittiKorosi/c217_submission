@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Enter two numbers"
+read a b
+
+first=$a
+second=$b
+
+
+if [ $a -gt $b ] ;
+then
+        echo "True. The difference between the two numbers is: $(($a-$b))"
+        else
+                echo "False. The difference between the two numbers is: $(($a-$b))"
+fi
