@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Enter password:"
+read password
+pw=${#password}
+
+if test $pw -ge 8 ;  
+then
+	echo "$password" | grep -q [0-9]
+	if test $? -eq 0 ; 
+	then
+		echo "$password" | grep -q [A-Z]
+		if test $? -eq 0 ; then
+			echo "$password" | grep -q [a-z]
+			if test $? -eq 0 ; then
+				echo "Password OK"
+			else
+				echo "Paaword must contain lower case character."
+			fi
+		else 
+		echo "Password must contain upper case character."
+		fi
+	else
+	echo "Password must at leaset one number."	
+	fi
+else
+	echo "Password length must be at least eight character long."
+fi
