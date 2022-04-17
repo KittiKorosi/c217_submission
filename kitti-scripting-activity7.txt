@@ -1,0 +1,100 @@
+#!/bin/bash
+T="true"
+F="false"
+
+co="answer is correct"
+inco="answer is incorrect"
+
+echo "In the animation film “Finding Nemo,” the main protagonist is a pufferfish. (true/false)"
+read Q1
+if [ "$Q1" = "$F" ];
+#"$valid" = "$Q1" ];
+then
+	echo $co
+else
+	echo $inco
+fi
+
+echo "Is Mount Kilimanjaro the world’s tallest peak?"
+read Q2
+	if [ "$Q2" = "$T" ];
+then
+	echo $co
+else
+	echo $inco
+fi
+
+echo "Pinocchio was Walt Disney’s first animated feature film in full color."
+read Q3
+        if [ "$Q3" = "$F" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "Venezuela is home to the world’s highest waterfall."
+read Q4
+        if [ "$Q4" = "$T" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "Coffee is a berry-based beverage."
+
+read Q5
+	if [ "$Q5" = "$T" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "The capital of Australia is Sydney."
+read Q6
+        if [ "$Q6" = "$F" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "The longest river in the world is the Amazon River."
+read Q7
+        if [ "$Q7" = "$F" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "Walt Disney has the record for most Academy Awards. "
+read Q8
+        if [ "$Q8" = "$T" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "By lying a frog on its back and softly caressing its tummy, it is possible to hypnotize it."
+read Q9
+        if [ "$Q9" = "$T" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+echo "The moon is wider than Australia."
+read Q10
+        if [ "$Q10" = "$F" ];
+then
+        echo $co
+else
+        echo $inco
+fi
+
+	
