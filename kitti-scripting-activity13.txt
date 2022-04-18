@@ -1,0 +1,16 @@
+#!/bin/bash
+
+readarray -t array1 < act13file1.txt
+readarray -t array2 < act13file2.txt
+
+echo "${array1[@]}"
+echo "${array2[@]}"
+
+array3=(`echo ${array1[@]} ${array2[@]} | tr ' ' '\n' | sort | uniq -u`)
+
+echo "${array3[@]}"
+
+echo "Only in file1:"
+echo ${array2[@]} ${array2[@]} ${array1[@]} | tr ' ' '\n' | sort | uniq -u
+echo "Only in file2:"
+echo ${array1[@]} ${array1[@]} ${array2[@]} | tr ' ' '\n' | sort | uniq -u
