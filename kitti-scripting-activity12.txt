@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+ls -lR $dir > dirTest1
+ls -lR $dir > dirTest2
+
+DIFF=$(diff dirTest1 dirTest2)
+if [ "$DIFF" != "" ]
+then
+    echo "The two directories: $dirTest1 $dirTest2 has no common element/s"
+else
+	echo "The two directories: $dirTest1 $dirTest2 has common element"
+
+fi
