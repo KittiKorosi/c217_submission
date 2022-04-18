@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#cat /dev/urandom | tr -cd 'a-fA-F'
+
+FILE=sales.txt
+rline=9
+if test -f "$FILE"; then
+    echo "$FILE is already exists."
+fi
+#cat > $FILE
+
+
+echo $rline
+
+for n in `seq "$rline"`
+do
+rNumbers=$(shuf -i 1-100 -n1)
+echo $rNumbers
+#echo "$rNumbers" >> "$FILE"
+done
+echo "$rNumbers"
+
+
