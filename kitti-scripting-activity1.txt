@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #user
 echo "User is:  
 $USER"
@@ -12,7 +14,7 @@ $now"
 echo "Current directory is: 
 ${PWD}"
 #how many files in dir
-echo "NO of files: " 
+echo "Number of files in directory: " 
 ls ${PWD} | wc -l
 #biggest file in current dir
 echo "Biggest file is:" 
