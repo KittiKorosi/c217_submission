@@ -1,18 +1,24 @@
 #!/bin/bash
 
-#cat /dev/urandom | tr -cd 'a-fA-F'
+
+echo "File name:"
+echo $1
+echo "Number of lines to write: "
+echo $2
+
+
 
 FILE=sales.txt
 rline=9
-if test -f "$FILE"; then
-    echo "$FILE is already exists."
+if test -f "$1"; then
+    echo "$1 is already exists."
 fi
 #cat > $FILE
 
 
-echo $rline
+#echo $rline
 
-for n in `seq "$rline"`
+for n in `seq "$2"`
 do
 rNumbers=$(shuf -i 1-100 -n1)
 echo $rNumbers

@@ -9,7 +9,7 @@ second=$b
 
 if [ $a -gt $b ] ;
 then
-	echo "True"
+	echo "True, first number is greater."
 	else
-		echo "False"
+		echo "False, second number is greater."
 fi

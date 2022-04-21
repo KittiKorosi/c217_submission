@@ -1,11 +1,25 @@
 #!/bin/bash
 
-echo "The filename is: "
-read file
+#echo "The filename is: "
+#read file
 
-if [ -f "$file" ]; then
+#if [ -f "$file" ]; then
+#    echo "error"
+#    exit
+#else 
+#	touch "$file"
+#fi
+
+echo "Filename is: "
+echo $1
+
+
+
+
+if [ -f "$1" ]; then
     echo "error"
     exit
-else 
-	touch "$file"
+else
+       touch "$1"
 fi
+
